@@ -1,4 +1,4 @@
-# laing-development
+# laing-dev
 
 ## Project setup
 ```

@@ -5,16 +5,6 @@ import 'vuetify/styles'
 // Vuetify
 import { createVuetify } from 'vuetify'
 
-export default createVuetify({
+export default createVuetify(
   // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
-  display: {
-    mobileBreakpoint: 'sm',
-    thresholds: {
-      xs: 0,
-      sm: 340,
-      md: 540,
-      lg: 800,
-      xl: 1280
-    }
-  }
-})
+)

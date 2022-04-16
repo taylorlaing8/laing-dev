@@ -31,6 +31,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .cont-main {
-  top: 78px;
+  margin: 78px 0px 0px;
 }
 </style>

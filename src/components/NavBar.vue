@@ -1,18 +1,23 @@
 <template>
   <v-app-bar app rounded height="100px" color="white" elevation="3">
-    <template v-if="display.sm == true">
-      {{ display }}
+    <template v-if="display.mdAndDown.value">
+      <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
     </template>
-    <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    <img :src="require('../../public/logo_dark.png')" height="50" class="ml-3"/>
+
+    <router-link to="/">
+      <img :src="require('../../public/logo_dark.png')" height="50" class="ml-3"/>
+    </router-link>
     
     <v-spacer></v-spacer>
     
-    <v-btn variant="text" rounded to="/">Home</v-btn>
-    <v-btn variant="text" rounded to="/about">About</v-btn>
-    <v-btn variant="text" rounded to="/web-development">Web Development</v-btn>
-    <v-btn variant="text" rounded to="/photography">Photography</v-btn>
-    <v-btn variant="text" rounded to="/contact">Contact</v-btn>
+    <template v-if="display.lgAndUp.value">
+      <v-btn variant="text" rounded to="/">Home</v-btn>
+      <v-btn variant="text" rounded to="/about">About</v-btn>
+      <v-btn variant="text" rounded to="/web-development">Web Development</v-btn>
+      <v-btn variant="text" rounded to="/photography">Photography</v-btn>
+      <v-btn variant="text" rounded to="/contact">Contact</v-btn>
+    </template>
   </v-app-bar>
 </template>
 

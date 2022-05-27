@@ -1,18 +1,20 @@
 <template>
-	<h1>About Page</h1>
+	<div>
+		<h1>STORE DASHBOARD</h1>
+	</div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-	name: 'AboutView',
+	name: 'StoreDashboard',
 
 	setup() {
-		return
+		return {}
 	},
 })
 </script>
-<style lang="scss" scoped>
-//
+
+<style scoped>
 </style>

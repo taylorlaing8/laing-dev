@@ -1,12 +1,12 @@
 <template>
-	<h1>About Page</h1>
+	<h1>PAGE NOT FOUND</h1>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-	name: 'AboutView',
+	name: 'PageNotFound',
 
 	setup() {
 		return

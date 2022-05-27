@@ -1,13 +1,13 @@
 <template>
-  <v-app>
-    <nav-bar/>
-    <v-main class="cont-main">
-      <v-container fluid>
-        <router-view/>
-      </v-container>
-    </v-main>
-  </v-app>
-  <footer-nav/>
+	<v-app>
+		<nav-bar />
+		<v-main>
+			<v-container fluid fill-height class="pa-0 fill-height ld-main">
+				<router-view />
+			</v-container>
+		</v-main>
+	</v-app>
+	<footer-nav />
 </template>
 
 <script lang="ts">
@@ -16,21 +16,20 @@ import NavBar from './components/NavBar.vue'
 import FooterNav from './components/FooterNav.vue'
 
 export default defineComponent({
-  components: {
-    NavBar,
-    FooterNav
-  },
-  name: 'App',
+	name: 'App',
 
-  data () {
-    return {
-      //
-    }
-  },
+	components: {
+		NavBar,
+		FooterNav,
+	},
+
+	setup() {
+		return
+	},
 })
 </script>
 <style lang="scss" scoped>
-.cont-main {
-  margin: 78px 0px 0px;
+.ld-main {
+	min-height: calc(100vh - 186px);
 }
 </style>

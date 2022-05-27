@@ -9,17 +9,23 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "auth0-js": "^9.19.0",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "eventemitter3": "^4.0.7",
+    "jwt-decode": "^3.1.2",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.14",
     "vuetify": "^3.0.0-beta.0",
+    "vuex": "^4.0.2",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@types/node": "^17.0.35",
     "@types/webfontloader": "^1.6.34",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",

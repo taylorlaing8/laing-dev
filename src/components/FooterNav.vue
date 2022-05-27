@@ -1,32 +1,33 @@
 <template>
   <v-footer bottom color="primary">
     <v-row justify="center" no-gutters>
-      <v-btn
-        v-for="link in links"
-        :key="link.title"
-        :to="link.url"
-        variant="text"
-        rounded
-        class="my-2"
-      >
-        {{ link.title }}
-      </v-btn>
-      <v-col class="primary lighten-2 py-4 text-center white--text text-caption
-" cols="12">
-        Copyright {{ new Date().getFullYear() }} © <strong>{{ title }}</strong>
+      <v-col cols="12" class="py-2 text-center">
+        <v-btn
+          v-for="link in footerMenu.links"
+          :key="link.title"
+          :to="link.url"
+          variant="text"
+          size="small"
+          rounded
+        >
+          {{ link.title }}
+        </v-btn>
+      </v-col>
+      <v-col cols="12" class="py-2 text-center">
+        <p class="text-caption">Copyright {{ new Date().getFullYear() }} © <strong>{{ footerMenu.title }}</strong></p>
       </v-col>
     </v-row>
   </v-footer>
 </template>
 
 <script lang='ts'>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "FooterNav",
 
-  data() {
-    return {
+  setup() {
+    const footerMenu = ref({
       title: "Laing Development",
       links: [
         {
@@ -50,8 +51,10 @@ export default defineComponent({
           url: '/contact'
         }
       ],
-    };
-  },
+    })
+
+    return { footerMenu }
+  }
 });
 </script>
 <style lang="scss" scoped>
